@@ -226,7 +226,7 @@ const updateAboutDetails = (tab, tabValue) => {
     tab.send(messages.ADBLOCK_UPDATED, {
       adblock: adblock.toJS(),
       settings: appSettings.toJS(),
-      resources: require('ad-block/lib/regions')
+      resources: require('ad-block').adBlockLists.regions
     })
   } else if (location === 'about:downloads' && downloads) {
     tab.send(messages.DOWNLOADS_UPDATED, {
